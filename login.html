@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="styles/autenticacao.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body class="container">
+  <main class="content col-12">
+    <div class="logo-container">
+      <!-- Esse link tem que levar para a página inicial -->
+      <a href="index.html">
+        <img src="assets/LogoCheckTime2.png" alt="Logo" max-width="220" height="80">
+      </a>
+    </div>
+    <div class="loginform-container">
+      <h3 class="titulologin">Entrar no CheckTime</h3>
+      <form id="login-form" class="form formcontainer" action="" method="post">
+        <div class="form-group">
+          <label for="email" class="labelcustomizada">Email:</label><br>
+          <input type="email" name="email" id="email_login" class="form-control inputcustomizado">
+          <div id="mensagensLoginCampoEmail" class="mensagensValidacao"></div>
+        </div>
+        <div class="form-group">
+          <label for="senha" class="labelcustomizada">Senha:</label><br>
+          <input type="password" name="senha" id="senha_login" class="form-control inputcustomizado">
+          <div id="mensagensLoginCampoSenha" class="mensagensValidacao"></div>
+        </div>
+        <button type="submit" class="btn botaoentrar">Entrar</button>
+      </form>
+      <div class="opcao-container">
+        <span>Primeira vez?&nbsp;</span><a href="cadastro.html">Cadastre-se</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts Internos -->
+
+  <script src="scripts/login.js"></script>
+  <script src="scripts/alerts.js"></script>
+  <script src="scripts/validadores.js"></script>
+  <script>
+
+    // Declara uma função para processar o formulário de login
+    function processaFormLogin(event) {
+      // Cancela a submissão do formulário para tratar sem fazer refresh da tela
+      event.preventDefault();
+
+      // Obtem os dados de login e senha a partir do formulário de login
+      var email = document.getElementById('email_login').value;
+      var senha = document.getElementById('senha_login').value;
+
+      if (email !== '' && senha !== '') {
+        // Valida login e se estiver ok, redireciona para tela inicial da aplicação
+        resultadoLogin = loginUser(email, senha);
+        if (resultadoLogin) {
+          window.location.href = 'listagem-tarefas.html';
+        }
+        else { // Se login falhou, avisa ao usuário
+          renderizaAlert('Email ou senha incorretos', 'danger');
+        }
+      } else {
+        renderizaAlert('Todos os campos precisam estar preenchidos', 'danger');
+      }
+    }
+
+    // Associa a funçao processaFormLogin  formulário adicionado um manipulador do evento submit
+    document.getElementById('login-form').addEventListener('submit', processaFormLogin);
+
+  </script>
+
+  <!-- Scripts Externos -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"
+    integrity="sha512-/DXTXr6nQodMUiq+IUJYCt2PPOUjrHJ9wFrqpJ3XkgPNOZVfMok7cRw6CSxyCQxXn6ozlESsSh1/sMCTF1rL/g=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

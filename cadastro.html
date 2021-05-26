@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="styles/autenticacao.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body class="container">
+  <main class="content col-12">
+    <div class="logo-container logo-cadastro">
+      <!-- Esse link tem que levar para a página inicial -->
+      <a href="index.html">
+        <img src="assets/LogoCheckTime2.png" alt="Logo" max-width="220" height="80">
+      </a>
+    </div>
+    <div class="loginform-container">
+      <h3 class="titulologin">Suas informações</h3>
+      <form id="login-form" class="form formcontainer" action="" method="post">
+        <div class="form-group">
+          <label for="email" class="labelcustomizada">Nome:</label><br>
+          <input type="text" name="email" id="nome_cadastro" class="form-control inputcustomizado">
+          <div id="mensagensCadastroCampoNome" class="mensagensValidacao"></div>
+        </div>
+        <div class="form-group">
+          <label for="email" class="labelcustomizada">Email:</label><br>
+          <input type="email" name="email" id="email_cadastro" class="form-control inputcustomizado">
+          <div id="mensagensCadastroCampoEmail" class="mensagensValidacao"></div>
+        </div>
+        <div class="form-group">
+          <label for="senha" class="labelcustomizada">Senha:</label><br>
+          <input type="password" name="senha" id="senha_cadastro" class="form-control inputcustomizado">
+          <div id="mensagensCadastroCampoSenha" class="mensagensValidacao"></div>
+        </div>
+        <div class="form-group">
+          <label for="senha" class="labelcustomizada">Confirmar senha:</label><br>
+          <input type="password" name="senha" id="confirmacao_senha_cadastro" class="form-control inputcustomizado">
+          <div id="mensagensCadastroCampoSenha2" class="mensagensValidacao"></div>
+        </div>
+        <button id="btn_cadastrar" class="btn botaocadastrar">Cadastrar</button>
+      </form>
+      <div class="opcao-container">
+        <span>Já tem um login?&nbsp;</span><a href="login.html">Entrar</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts Internos -->
+
+  <script src="scripts/login.js"></script>
+  <script src="scripts/alerts.js"></script>
+  <script src="scripts/validadores.js"></script>
+  <script>
+    function cadastraNovoUsario(event) {
+      // Cancela a submissão do formulário para tratar sem fazer refresh da tela
+      event.preventDefault();
+
+      // Obtem os dados do formulário
+      let nome = document.getElementById('nome_cadastro').value;
+      let email = document.getElementById('email_cadastro').value;
+      let senha = document.getElementById('senha_cadastro').value;
+      let confirmacaoSenha = document.getElementById('confirmacao_senha_cadastro').value;
+      
+      if (nome !== '' && email !== '' && senha !== '' && confirmacaoSenha !== '') {
+        if (senha != confirmacaoSenha) {
+          renderizaAlert('As senhas digitadas não são iguais.', 'warning');
+          return;
+        } else {
+          // Adiciona o usuário no banco de dados
+          addUser(nome, senha, email);
+        }
+      } else {
+        renderizaAlert('Todos os campos precisam estar preenchidos', 'danger')
+      }
+    }
+
+    // Associar salvamento ao botao
+    document.getElementById('btn_cadastrar').addEventListener('click', cadastraNovoUsario);
+  </script>
+
+  <!-- Scripts Externos -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"
+    integrity="sha512-/DXTXr6nQodMUiq+IUJYCt2PPOUjrHJ9wFrqpJ3XkgPNOZVfMok7cRw6CSxyCQxXn6ozlESsSh1/sMCTF1rL/g=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

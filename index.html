@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Time</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+
+<body class="container-fluid">
+  <header class="container-fluid header">
+    <div class="row">
+      <div class="col 12 col-sm-12 col-md-6 col-lg-9 header_area">
+        <img src="assets/LogoCheckTime2.png" class="logo">
+      </div>
+      <div class="col 12 col-sm-12 col-md-6 col-lg-3 menu_area">
+        <nav class="nav nav-pills flex-column flex-sm-row">
+          <a id="entrarMenuInicial" class="nav-link" href="login.html">Entrar</a>
+          <a id="castrarMenuInicial" class="nav-link" href="cadastro.html">Cadastrar</a>
+          <a id="listagemMenuInicial" class="nav-link nao-visivel" href="listagem-tarefas.html">Tarefas</a>
+          <a id="sairMenuInicial" class="nav-link nao-visivel" href="#">Sair</a>
+        </nav>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="container-fluid main">
+
+    <section class="row texto_principal">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+        <h1>"Com organização e tempo, acha-se o segredo de fazer tudo e bem feito!"</h1>
+        <h6>Pitágoras</h6><br/><br/>
+        <h2>Chega de perder tempo procurando ferramentas para organizar seu tempo. Conheça um pouco mais do 
+          Checktime, e descubra como esta solução web pode ajudar você.....<a href="#sobre" >saiba mais</a>!</h2>
+      </div>
+
+    </section>
+
+
+    <section class="row sobre">
+      <div id="sobre" class="col-12 col-sm-12 col-md-12 col-lg-12">
+        <h1>SOBRE O CHECKTIME</h1>
+        <p>O Checktime é uma solução web desenvolvida para ajudar você a organizar seu tempo. Foi desenvolvida
+          pelos alunos do 1º período de Engenharia de Software da PUC/MG, da disciplinha "Trabalho Interdisciplinar - 
+          Aplicações Web", tendo como coordenadores gerais os professores Rommel Vieira Carneiro e Simone Alves 
+          Nogueira. O Checktime surgiu pela percepção dos integrantes do grupo de um grande problema: organização 
+          do tempo. A vida moderna traz exigências sem paralelismo na história, as pessoas estão a todo
+          momento cheias de tarefas seja em casa, no trabalho ou faculdade. Com efeito, conciliar
+          todas essas tarefas e ainda ter tempo para descansar e dormir parece uma tarefa
+          impossível. Utilizando a nossa ferramenta, você será capaz de: controlar suas tarefas, por meio de uma 
+          visualização destas de forma organizada e estruturada; contribuir para o uso otimizado do celular, de forma 
+          que ele se torne uma ferramenta de otimização do tempo ao invés de um fator de distração; 
+          e contribuir para o gerenciamento das multi-tarefas do cotidiano. Enfim...<b style="color:#ffdf2b">SEJA BEM-VINDO!</b></p>
+      </div>
+    </section>
+
+
+    <!-- Team -->
+    <section id="team" class="pb-5 pt-5">
+      <div class="container-fluid equipe">
+        <h5 class="section-title h1">A NOSSA EQUIPE</h5>
+        <div class="row justify-content-center">
+          <!-- Team member -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="image-flip">
+              <div class="mainflip flip-0">
+                <div class="frontside">
+                  <div class="card">
+                    <div class="card-body text-center title_card">
+                      <p><img class=" img-fluid"
+                          src="assets/img3.jpeg"
+                          alt="card image"></p>
+                      <h4 class="card-title">Ícaro Emídio Adão</h4>
+                      <p class="card-text">20 anos</p> 
+                      <p class="card-text">Engenharia de Software - PUC/MG</p> 
+                    </div>
+                  </div>  
+                </div>
+                <div class="backside">
+                  <div class="card">
+                    <div class="card-body text-center mt-4">
+                      <h4 class="card-title">Ícaro Emídio Adão</h4>
+                      <p class="card-text sobre_equipe">Tem 20 anos, trabalha como desenvolvedor fullstack 
+                        com React.js e Ruby on Rails. O principal hobby é estudar sobre design patterns. É 
+                        formado em Desenvolvimento de Sistemas pelo Colégio Técnico da UFMG e atualmente está 
+                        cursando Engenharia de Software na PUC Minas.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ./Team member -->
+          <!-- Team member -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+              <div class="mainflip">
+                <div class="frontside">
+                  <div class="card">
+                    <div class="card-body text-center">
+                      <p><img class=" img-fluid"
+                          src="assets/img4.jpeg"
+                          alt="card image"></p>
+                      <h4 class="card-title">Izabella de Castro Lucas</h4>
+                      <p class="card-text">21 anos</p> 
+                      <p class="card-text ">Engenharia de Software - PUC/MG</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="backside">
+                  <div class="card">
+                    <div class="card-body text-center mt-4">
+                      <h4 class="card-title">Izabella de Castro Lucas</h4>
+                      <p class="card-text sobre_equipe">Tem 21 anos, formada no ensino médio em 2017, está cursando Engenharia 
+                        de Software pela PUC/MG. Trabalhou na área de marketing em um cursinho preparatório para o 
+                        Enem e atualmente, está se dedicando aos estudos e seu hobbie em pintura.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ./Team member -->
+          <!-- Team member -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+              <div class="mainflip">
+                <div class="frontside">
+                  <div class="card">
+                    <div class="card-body text-center">
+                      <p><img class=" img-fluid"
+                          src="assets/img1.jpeg"
+                          alt="card image"></p>
+                      <h4 class="card-title">Nataniel Geraldo M Peixoto</h4>
+                      <p class="card-text">27 anos</p> 
+                      <p class="card-text">Engenharia de Software - PUC/MG</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="backside">
+                  <div class="card">
+                    <div class="card-body text-center mt-4">
+                      <h4 class="card-title">Nataniel Geraldo M Peixoto</h4>
+                      <p class="card-text sobre_equipe">Tem 27 anos, é formado em Ciências Contábeis pela PUC/MG, possui
+                        MBA em Gestão Estratégica de Finanças pela PUCMG. Atualmente está cursando Engenharia de Software pela PUC/MG. Trabalha
+                        no departamento de Controladoria da Sociedade Mineira de Cultura.   
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ./Team member -->
+          <!-- Team member -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+              <div class="mainflip">
+                <div class="frontside">
+                  <div class="card">
+                    <div class="card-body text-center">
+                      <p><img class=" img-fluid"
+                          src="assets/img2.jpeg"
+                          alt="card image"></p>
+                      <h4 class="card-title">Sara Lourenço Iglesias</h4>
+                      <p class="card-text">21 anos</p> 
+                      <p class="card-text">Engenharia de Software - PUC/MG</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="backside">
+                  <div class="card">
+                    <div class="card-body text-center mt-4">
+                      <h4 class="card-title">Sara Lourenço Iglesias</h4>
+                      <p class="card-text sobre_equipe">Tem 21 anos, é apaixonada por cinema, música, podcaster no "Pequenas 
+                        Distrações", e tem ótimas habilidades de expressão. Possui experiência com traduções de 
+                        textos do inglês para português, e de recepção e socialização de estrangeiros no Brasil.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ./Team member -->
+          <!-- Team member -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+              <div class="mainflip">
+                <div class="frontside">
+                  <div class="card">
+                    <div class="card-body text-center">
+                      <p><img class=" img-fluid"
+                          src="assets/img5.jfif"
+                          alt="card image"></p>
+                      <h4 class="card-title">Pedro Campos Miranda</h4>
+                      <p class="card-text">26 anos</p> 
+                      <p class="card-text">Engenharia de Software - PUC/MG</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="backside">
+                  <div class="card">
+                    <div class="card-body text-center mt-4">
+                      <h4 class="card-title">Pedro Campos Miranda</h4>
+                      <p class="card-text sobre_equipe">Tem 26 anos, é formado em 
+                        engenharia mecânica pela PUC Minas. Atualmente cursa 
+                        Engenharia de Software na PUC Minas. Trabalha como Engenheiro 
+                        Orçamentista Junior em uma empresa de mecânica industrial.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ./Team member -->
+        </div>
+      </div>
+    </section>
+    <!-- Team -->
+  </main>
+
+
+  <footer class="container-fluid footer">
+    <div class="row">
+      <div class="col-12 footer_area">
+        Copyright 2020 - Trabalho Interdisciplinar de Aplicações Web
+      </div>
+    </div>
+  </footer>
+
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"
+    integrity="sha512-/DXTXr6nQodMUiq+IUJYCt2PPOUjrHJ9wFrqpJ3XkgPNOZVfMok7cRw6CSxyCQxXn6ozlESsSh1/sMCTF1rL/g=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="scripts/login.js"></script>
+  <script>
+     if (usuarioCorrente.email) {
+      const opcaoSair = document.getElementById('sairMenuInicial');
+      const opcaoListagem = document.getElementById('listagemMenuInicial');
+      document.getElementById('entrarMenuInicial').style.display = 'none';
+      document.getElementById('castrarMenuInicial').style.display = 'none';
+      opcaoSair.classList.add('visivel');
+      opcaoListagem.classList.add('visivel');
+      opcaoSair.addEventListener('click', logoutUser);
+    }    
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Time</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="scripts/login.js"></script>
+  <script>
+    // Verifica se o usuário já esta logado e se negativo, redireciona para tela de login        
+    if (!usuarioCorrente.email) {
+      window.location.href = LOGIN_URL;
+    }
+
+    function initPage() {
+      // Associa a função de logout ao botão
+      document.getElementById('btn_logout').addEventListener('click', logoutUser);
+
+      // Informa o nome do usuário logado
+      document.getElementById('nomeUsuarioCorrente').innerHTML = usuarioCorrente.nome;
+
+      imprimeDados();
+    }
+
+    // Associa ao evento de carga da página a função para verificar se o usuário está logado
+    window.addEventListener('load', initPage);
+  </script>
+</head>
+
+<body class="container-fluid sem-margin custom-body">
+
+  <header class="container-fluid header sem-margin">
+    <div class="row">
+      <div class="col 12 col-sm-12 col-md-9 col-lg-10 header_area">
+        <a href="index.html">
+          <img src="assets/LogoCheckTime2.png" class="logo">
+        </a>
+      </div>
+      <div class="col 12 col-sm-12 col-md-3 col-lg-2 menu_area">
+        <nav class="nav nav-pills flex-column flex-sm-row">
+          <a class="nav-link" id="btn_logout" href="#">Sair</a>
+        </nav>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="container-fluid main-content sem-margin">
+    <div class="row top">
+      <h3 class="titulo-corpadraosite col-lg-8 col-md-8 col-sm-12 pt-4 pl-3">Olá, <span
+          id="nomeUsuarioCorrente"></span>!</h3>
+      <div class="col-lg-2 col-md-2 col-sm-4 pt-4 filtro 1">
+        <label for="filtroPrioridade"><b>Prioridade</b></label>
+        <select class="form-control" id="filtroPrioridade">
+          <option>TODAS</option>
+          <option>ALTA </option>
+          <option>MÉDIA </option>
+          <option>BAIXA </option>
+        </select>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-4 pt-4 filtro 2">
+        <label for="filtroCategoria"><b>Categoria</b></label>
+        <select class="form-control" id="filtroCategoria">
+          <option>TODAS</option>
+          <option>ESTUDO </option>
+          <option>TRABALHO</option>
+          <option>LAZER </option>
+        </select>
+        <button type="button" id="btn_aplly" onclick="imprimeDados()" class="mr-0 my-1 btn btn-corpadraosite">Aplicar</button>
+      </div>
+    </div>
+    <div id="tela" class="row"></div>
+    <!-- Modal -->
+    <div class="modal fade" id="modalInclusaoTarefas" tabindex="-1" role="dialog"
+      aria-labelledby="modalInclusaoTarefasLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="modalInclusaoTarefasLabel">Incluir Tarefa</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="task-box" class="col-md-12">
+              <form id="task-form" class="form" method="post">
+                <h5 class="text-center titulo-corpadraosite">Título da Tarefa</h5>
+                <div class="form-group">
+                  <input type="text" name="tituloTarefa" id="tituloTarefaModal" maxlength="20" class="form-control">
+                </div>
+                <label for="categoriaTarefa">Categoria da Tarefa</label>
+                <select class="form-control" id="categoriaTarefa">
+                  <option>TRABALHO</option>
+                  <option>ESTUDO</option>
+                  <option>LAZER</option>
+                </select>
+                <div class="md-form md-outline input-with-post-icon datepicker">
+                  <label for="example">Data</label>
+                  <input placeholder="Select date" type="date" id="datatarefa" class="form-control">
+                </div>
+                <div class="md-form md-outline">
+                  <label for="default-picker">Duração da Tarefa</label>
+                  <input type="time" id="duracaotarefa" class="form-control" placeholder="Select time">
+                </div>
+                <div class="form-group">
+                  <label for="descricaotarefa">Descrição da Tarefa</label>
+                  <textarea data-ls-module="charCounter" maxlength="150" class="form-control" id="descricaotarefa"
+                    rows="3"></textarea>
+                </div>
+                <label for="form-check-input">Nível de Prioridade</label>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tarefaPrioridadeAlta"
+                    value="1">
+                  <span class="badge badge-pill badge-danger">Alto</span>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tarefaPrioridadeMedia"
+                    value="2">
+                  <span class="badge badge-pill badge-warning">Médio</span>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tarefaPrioridadeBaixa"
+                    value="3">
+                  <span class="badge badge-pill badge-success">Baixo</span>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="btn_salvar" class="btn btn-corpadraosite">Incluir</button>
+          </div>
+          <div id="mensagemModalAdicao" class="mensagensValidacao validacaoCustomizada"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal ediçao -->
+    <div class="modal fade" id="editnModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="editModalLabel">Editar Tarefa</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="task-box" class="col-md-12">
+              <form id="task-form" class="form" method="post">
+                <h5 class="text-center titulo-corpadraosite">Título da Tarefa</h5>
+                <div class="form-group">
+                  <input type="text" name="editTituloTarefa" id="editTitulo" class="form-control">
+                </div>
+                <label for="categoriaTarefa">Categoria da Tarefa</label>
+                <select class="form-control" id="editCategoriaTarefa">
+                  <option>TRABALHO</option>
+                  <option>ESTUDO</option>
+                  <option>LAZER</option>
+                </select>
+                <div class="md-form md-outline input-with-post-icon datepicker">
+                  <label for="example">Data</label>
+                  <input placeholder="Select date" type="date" id="editDataTarefa" class="form-control">
+                </div>
+                <div class="md-form md-outline">
+                  <label for="default-picker">Duração da Tarefa</label>
+                  <input type="time" id="editDuracaotarefa" class="form-control" placeholder="Select time">
+                </div>
+                <div class="form-group">
+                  <label for="descricaotarefa">Descrição da Tarefa</label>
+                  <textarea class="form-control" id="editDescricaotarefa" rows="3" maxlength="200"></textarea>
+                </div>
+                <label for="form-check-input">Nível de Prioridade</label>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="editPrioridadeAlta"
+                    value="1">
+                  <span class="badge badge-pill badge-danger">Alto</span>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="editPrioridadeMedia"
+                    value="2">
+                  <span class="badge badge-pill badge-warning">Médio</span>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="editPrioridadeBaixa"
+                    value="3">
+                  <span class="badge badge-pill badge-success">Baixo</span>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="btn_update" onclick="salvaEdicao()" class="btn btn-corpadraosite">Editar</button>
+          </div>
+          <div id="mensagemModalAdicao" class="mensagensValidacao validacaoCustomizada"></div>
+        </div>
+      </div>
+    </div>
+    <div class="incluir-tarefacontainer my-5" style="width: 110px; height: 200px;">
+      <button type="button" class="btn btn-circle btn-sm incluirTarefa my-5" data-toggle="modal"
+        style="background-color: #483d68;" data-target="#modalInclusaoTarefas"><svg width="0em" height="2em"
+          viewBox="0 0 16 16" class="bi bi-pencil" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+          <path fill="#ffdf2b" fill-rule="evenodd"
+            d="M11.75 4.5a.75.75 0 01.75.75V11h5.75a.75.75 0 010 1.5H12.5v5.75a.75.75 0 01-1.5 0V12.5H5.25a.75.75 0 010-1.5H11V5.25a.75.75 0 01.75-.75z">
+          </path>
+        </svg>
+      </button>
+    </div>
+  </main>
+
+  <footer id="footer-aplicacao" class="container-fluid footer">
+    <div class="row">
+      <div class="col-12 footer_area">
+        Copyright 2020 - Trabalho Interdisciplinar de Aplicações Web
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"
+    integrity="sha512-/DXTXr6nQodMUiq+IUJYCt2PPOUjrHJ9wFrqpJ3XkgPNOZVfMok7cRw6CSxyCQxXn6ozlESsSh1/sMCTF1rL/g=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="scripts/validadores.js"></script>
+  <script src="scripts/alerts.js"></script>
+  <script src="scripts/app.js"></script>
+  <script>
+
+    document.getElementById('btn_salvar').addEventListener('click', incluirTarefa);
+  </script>
+</body>
+
+</html>

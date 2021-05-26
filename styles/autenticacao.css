@@ -1,0 +1,150 @@
+/* Estilização geral */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+body {
+  background-color: #483D68 !important;
+}
+
+.margin-top {
+  margin-top: 20px !important;
+}
+
+.alert-customizado {
+  position: fixed !important;
+  z-index: 99 !important;
+  top: 0 !important;
+  right: 0 !important;
+  left: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 500px;
+}
+
+.mensagensValidacao {
+  display: none;
+  color: red;
+  font-size: 13px;
+  line-height: 13px;
+  padding: 5px 0px;
+}
+
+.opcao-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  margin-top: 30px;
+  border-top: 2px solid #62748e;
+}
+
+.opcao-container > span {
+  font-size: 18px;
+}
+
+.opcao-container > a {
+  color: #62748e;
+}
+
+.opcao-container > a:hover {
+  color: #483D68;
+}
+
+.opcao-container > a, 
+.opcao-container > a:hover {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.inputcustomizado {
+  box-shadow: none !important;
+}
+
+.labelcustomizada {
+  font-size: 13px !important;
+  color: #62748e;
+  margin: 0 !important;
+}
+
+
+/* Estilização do container de login */
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginform-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 430px;
+  height: fit-content;
+  padding: 40px 50px 0px 50px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.formcontainer {
+  width: 100%;
+}
+
+.botaoentrar {
+  -webkit-transition: background-color 2s ease-out !important;
+  -moz-transition: background-color 2s ease-out !important;
+  -o-transition: background-color 2s ease-out !important;
+  transition: background-color 2s ease-out !important;
+  background-color: #fff;
+  width: 100%;
+  border: 2px solid #483D68 !important;
+  color: #483D68 !important;
+  margin-top: 20px;
+  font-size: 18px !important;
+}
+
+.botaoentrar:hover {
+  background-color: #483D68;
+  border: 2px solid #fff !important;
+  color: #fff !important;
+}
+
+.titulologin {
+  color: #62748e;
+  margin-bottom: 40px;
+}
+
+/* Estilização tela de cadastrar*/
+
+.botaocadastrar {
+  -webkit-transition: background-color 2s ease-out !important;
+  -moz-transition: background-color 2s ease-out !important;
+  -o-transition: background-color 2s ease-out !important;
+  transition: background-color 2s ease-out !important;
+  background-color: #fff;
+  width: 100%;
+  border: 2px solid #483D68 !important;
+  color: #483D68 !important;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 18px !important;
+}
+
+.botaocadastrar:hover {
+  background-color: #483D68;
+  border: 2px solid #fff !important;
+  color: #fff !important;
+}

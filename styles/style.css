@@ -1,0 +1,457 @@
+body,html {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-height: 100vh;
+    height: 100vh;
+}
+
+.alarmclock-container {
+    max-width: 300px !important;
+    max-height: 300px !important;
+}
+
+.lupa-container {
+    max-width: 200px !important;
+    max-height: 200px !important;
+}
+
+.titulo-tarefanaoencontrada {
+    color: #A6A1B5;
+    margin-top: 20px;
+}
+
+.textoContagemTempo {
+    font-size: 1.8em;
+    font-weight: 800;
+}
+
+.botao-opcaocontagem {
+    background-color:  #483D68 !important;
+    color: white !important;
+    margin: 0px 10px;
+}
+
+.duracao-customizada {
+    max-width: 150px;
+}
+
+.btn-corpadraosite {
+    background-color:  #483D68 !important;
+    color: white !important;
+}
+
+.imagem-centralizada {
+    margin: 0px auto;
+}
+
+.titulo-corpadraosite {
+    color:  #483D68 !important;
+}
+
+.nao-visivel {
+    display: none !important;
+}
+
+.visivel {
+    display: block !important;
+}
+
+.alert-customizado {
+    position: fixed !important;
+    z-index: 1052 !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 10px !important;
+    max-width: 500px;
+}
+
+.mensagensValidacao {
+    display: none;
+    color: red;
+    font-size: 13px;
+    line-height: 13px;
+    padding: 5px 0px;
+}
+
+.validacaoCustomizada {
+    font-size: 16px;
+    padding: 5px 0px 15px 0px;
+    text-align: center;
+}
+
+.custom-body {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.header {
+    background: #483D68;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-top: 0px !important;
+    padding: 5px;
+  }
+  
+.logo{
+    max-width: 330px;
+}
+
+.header_area {
+    padding: 10px;
+}
+
+.menu_area {
+    font-size: 1.6em;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.menu_area a{
+    color: white;
+}
+
+.menu_area a:hover{
+    color: #ffdf2b;
+}
+
+.texto_principal{
+    text-align: center;
+    padding-top: 190px;
+    padding-bottom: 190px;
+    background-image: url('../assets/imagemfundo.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    font-size: 2.0em;
+}
+
+.texto_principal h2,h1{
+    font-size: 1.1em!important;
+    font-style: italic;
+    color: #483D68;
+    font-weight: bold!important;
+}
+
+
+.texto_principal h6{
+    font-size: 1.0em;
+    font-style: italic;
+    color: #483D68;
+}
+
+.footer{
+    background: #483D68;
+    padding: 30px;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: auto;
+}
+
+.sobre{
+    background: #483D68;
+    font-size: 1.7em;
+    color: white;
+    text-align: justify;
+    padding: 10%;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    margin-bottom: 0px;
+}
+
+.sobre h1{
+    text-align: center;
+    font-size: 1.7em!important;
+    color: #ffdf2b!important;
+    font-style: normal;
+}
+
+.listaTarefas{
+    padding-top: 340px;
+    padding-bottom: 340px;
+}
+
+/*Card - Inicio*/
+.card-vermelho{
+    background-color:#FF3535 !important;
+}
+.card-amarelo{
+    background-color:#FFE137 !important;
+}
+.card-verde{
+    background-color:#019942 !important ;
+}
+.card-finalizada{
+    background-color:#A8A8A5 !important ;
+}
+/*Card - Fim*/
+
+
+/*Incício - Equipe*/
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+#team {
+    padding: 8%;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.team{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #483D68;
+    border-color: #483D68;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #483D68;
+    border-color: #483D68;
+}
+
+section .section-title {
+    text-align: center;
+    color: #483D68;
+    margin-bottom: 50px;
+    margin-top: 0px;
+    text-transform: uppercase;
+}
+
+#team .card {
+    border: none;
+    background: #483D68;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.mainflip {
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frontside {
+    position: relative;
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.backside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 1s;
+    -o-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+    min-height: 350px;
+}
+
+.backside .card a {
+    font-size: 22px;
+    color:#483D68 !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+    color:#ffdf2b !important;
+    font-size: 1.8em;
+}
+
+.frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.card-text{
+    font-size: 1.25em;
+    color: white;
+}
+
+.equipe h5{
+    font-weight: bold;
+}
+
+
+.title_card h4{
+    color: #ffdf2b!important;
+}
+
+.sobre_equipe{
+    max-height: 220px!important;
+    overflow: auto;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+
+::-webkit-scrollbar-track
+{
+	
+	border-radius: 10px;
+	background-color: #483D68;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color:  #483D68;
+}
+
+
+
+
+/*Fim - Equipe*/
+
+
+/*Início - Login*/
+
+.login {
+    margin: 0;
+    padding: 0;
+    background-color: #483D68#483D68;
+    height: 100vh;
+  }
+  #login .container #login-row #login-column #login-box {
+    margin-top: 120px;
+    max-width: 600px;
+    height: 380px;
+    font-size: 1.5em;
+    border: 1px solid #9C9C9C;
+    background-color: #EAEAEA;
+  }
+  #login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+  }
+  #login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+  }
+
+/*Fim - Login*/
+
+/*Fim - Login*/
+/*Início - Botao circular*/
+
+.btn-circle.btn-sm { 
+    width: 34px; 
+    height: 34px; 
+    padding: 0px 0px; 
+    border-radius: 17px; 
+    font-size: 10px; 
+    text-align: center; 
+} 
+/*Fim- Botao circula*/
+.incluir-tarefacontainer{
+  position: fixed;
+  bottom:10px;
+  right:10px;
+  padding: 10px;
+  cursor: pointer;
+}
+.btn-circle.btn-sm.incluirTarefa { 
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50px; 
+    font-size: 10px; 
+    text-align: center;
+} 
+.incluir-tarefacontainer {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.sem-margin {
+    margin: 0px !important;
+}
+
+.main-content {
+    height: fit-content;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 768px){
+
+    .menu_area{
+        justify-content: center;
+    }
+
+}
+
+.filtro{
+    color: #483D68;
+}
