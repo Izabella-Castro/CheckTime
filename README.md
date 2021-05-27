@@ -19,7 +19,6 @@ Esse projeto busca resolver o problema das pessoas em organizar seu tempo, dentr
 
  - [Projeto hospedado no Heroku](https://checktime-tiaw.herokuapp.com/)
  - [Projeto de Interface](https://www.figma.com/proto/e9WE9ism2gznQfjZ823ITw/CheckTime-TIW?node-id=116%3A3&scaling=min-zoom)
- - [Kanban configurado no Trello](https://trello.com/b/kSaiyYuS/tiaw-organiza%C3%A7%C3%A3o-de-tempo)
 
 # Estrutura de Diretórios
 
